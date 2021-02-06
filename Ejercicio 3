@@ -1,0 +1,49 @@
+int Rojo1 = 11;
+int Amarillo1 = 12;
+int Verde1 = 13;
+int Rojo2 = 8;
+int Amarillo2 = 9;
+int Verde2 = 10;
+
+void setup() {
+  pinMode(Rojo1, OUTPUT);
+  pinMode(Amarillo1, OUTPUT);
+  pinMode(Verde1, OUTPUT);
+  pinMode(Rojo2, OUTPUT);
+  pinMode(Amarillo2, OUTPUT);
+  pinMode(Verde2, OUTPUT);
+}
+
+void loop(){
+ 
+  //HIGH LOW LOW LOW LOW HIGH
+  digitalWrite(Rojo1, HIGH);
+  digitalWrite(Verde2, HIGH);
+  delay(5000);
+ 
+  digitalWrite(Verde2, LOW);
+  //delay(500);
+ 
+  digitalWrite(Rojo1, HIGH);
+  digitalWrite(Amarillo2, HIGH);
+  delay(1000);
+ 
+  digitalWrite(Rojo1, LOW);
+  digitalWrite(Amarillo2, LOW);
+  //delay(500);
+ 
+  digitalWrite(Verde1, HIGH);
+  digitalWrite(Rojo2, HIGH);
+  delay(5000);
+
+  digitalWrite(Verde1, LOW);
+  //delay(500);
+ 
+  digitalWrite(Amarillo1, HIGH);
+  digitalWrite(Rojo2, HIGH);
+  delay(1000);
+ 
+  digitalWrite(Rojo2, LOW);
+  digitalWrite(Amarillo1, LOW);
+  //delay(500);
+}
