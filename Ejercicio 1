@@ -1,0 +1,29 @@
+//Control Push Button-LED
+int LED = 13;
+int BUTTON = 12;
+int estadoBoton;
+int frecuencia = 1000;
+
+void setup() {
+ 
+  pinMode(LED,OUTPUT);
+  pinMode(BUTTON, INPUT);
+  Serial.begin(9600);
+ 
+}
+
+void loop() {
+ 
+  estadoBoton = digitalRead(BUTTON);
+  if(estadoBoton == HIGH){
+    frecuencia = 250;
+  }else{
+  frecuencia = 1000;
+  }
+
+  digitalWrite(LED, HIGH);
+  delay(frecuencia);
+  digitalWrite(LED, LOW),
+  delay(frecuencia);
+ 
+}
