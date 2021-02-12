@@ -1,0 +1,18 @@
+int analogPin = A0;
+int val = 0;
+int LED_13 = 13;
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(LED_13, OUTPUT);
+}
+
+//Uso de analogWrite
+void loop()
+{
+  val = analogRead(analogPin);
+  Serial.print("Voltaje: ");
+  Serial.println(val/4); //PWM
+  analogWrite(LED_13, val/4);
+}
